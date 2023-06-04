@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from typing import *
 
-#* All tests passed --- x/x passed
+#* All tests passed
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         hasToIncrement: bool = True

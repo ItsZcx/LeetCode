@@ -12,26 +12,29 @@ The folders are organized as follows:
 <pre>
 .
 ├── <b>Easy</b>
-│   └── [problem_name]
-│      ├── README.md
-│      ├── [problem_name].py
-│      └── <b>others</b>
-│           ├── .gitignore
-│           └── ...
+│   ├── [problem_name]
+│   │  ├── README.md
+│   │  ├── [problem_name].py
+│   │  └── <b>others</b>
+│   │       ├── .gitignore
+│   │       └── ...
+│   └── ...
 ├── <b>Medium</b>
-│   └── [problem_name]
-│      ├── README.md
-│      ├── [problem_name].py
-│      └── <b>others</b>
-│           ├── .gitignore
-│           └── ...
+│   ├── [problem_name]
+│   │  ├── README.md
+│   │  ├── [problem_name].py
+│   │  └── <b>others</b>
+│   │       ├── .gitignore
+│   │       └── ...
+│   └── ...
 └── <b>Hard</b>
-    └── [problem_name]
-        ├── README.md
-        ├── [problem_name].py
-        └── <b>others</b>
-            ├── .gitignore
-            └── ...
+    ├── [problem_name]
+    │   ├── README.md
+    │   ├── [problem_name].py
+    │   └── <b>others</b>
+    │       ├── .gitignore
+    │       └── ...
+    └── ...
 </pre>
 
 The problems are categorized into three main difficulty levels: **`Easy`**, **`Medium`**, and **`Hard`**. Within each difficulty level, the problems are further organized into separate directories, with each directory representing a specific problem.

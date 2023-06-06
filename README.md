@@ -14,7 +14,7 @@ The folders are organized as follows:
 ├── <b>Easy</b>
 │   └── [problem_name]
 │      ├── README.md
-│      └── [problem_name].py
+│      ├── [problem_name].py
 │      └── <b>others</b>
 │           ├── .gitignore
 │           └── ...
@@ -28,7 +28,7 @@ The folders are organized as follows:
 └── <b>Hard</b>
     └── [problem_name]
         ├── README.md
-        └── [problem_name].py
+        ├── [problem_name].py
         └── <b>others</b>
             ├── .gitignore
             └── ...

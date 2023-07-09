@@ -49,7 +49,7 @@ def getDifficulty():
         return "Hard"
 
 # Remove first space in a string
-def removeFistSpace(name: str):
+def removeFirstSpace(name: str):
     spacePos: int = name.find(' ')
 
     if spacePos != -1 and name[spacePos - 1] == ".":
@@ -60,7 +60,7 @@ def removeFistSpace(name: str):
 # Get problem number and name
 def getName():
     name: str = input('\nPlease write the number as well as the name of the problem.\n - Ex: "1. Two Sum"\n--> ')
-    name = removeFistSpace(name)
+    name = removeFirstSpace(name)
     return name
 
 # Creates directories
@@ -85,10 +85,12 @@ def createFiles(finalPath: str, name: str):
     # Create readme
     with open(readmePath, 'w') as _readme:
         _readme.write(readmeContent)
+
     # Create .py + give permissions
     with open(pyPath, 'w') as _pyPath:
         _pyPath.write(pyContent)
         os.chmod(pyPath, 0o755)
+
     # Create .gitignore
     with open(gitignorePath, 'w') as _gitignorePath:
         _gitignorePath.write(gitignoreContent)
@@ -108,4 +110,6 @@ def main():
     name: str = getName()
     createStructure(difficulty, name)
     print("\nInitialization finished!")
-main()
+
+if __name__ == "__main__":
+    main()

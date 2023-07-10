@@ -22,36 +22,35 @@ class Solution:
         return solution
 
 #* All tests passed.
-# Other optimal solution O(n)
+# Optimal solution, O(n) [Bucket Sort variation]
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         # Create a dictionary to store the count of each number
-        count:  Dict[int, int] = {}
+        hashMap:  Dict[int, int] = {}
 
         # Create a list of empty lists to store numbers based on their frequency
-        freq = [[] for i in range(len(nums) + 1)]
+        freqList: List[List[int]] = [[] for i in range(len(nums) + 1)]
 
         # Count the occurrences of each number in the input list
         for n in nums:
-            count[n] = 1 + count.get(n, 0)
+            hashMap[n] = 1 + hashMap.get(n, 0)
 
         # Store numbers in the 'freq' list based on their frequency
-        for n, c in count.items():
-            freq[c].append(n)
+        for n, c in hashMap.items():
+            freqList[c].append(n)
 
         # Create a result list to store the top k frequent numbers
-        res = []
+        solution: List[str] = []
 
         # Traverse the 'freq' list from the end to start
-        for i in range(len(freq) - 1, 0, -1):
+        for i in range(len(freqList) - 1, 0, -1):
             # Traverse each number in the current frequency bucket
-            for n in freq[i]:
+            for n in freqList[i]:
                 # Append the number to the result list
-                res.append(n)
-
+                solution.append(n)
                 # Check if the result list has reached k numbers
-                if len(res) == k:
-                    return res
+                if len(solution) == k:
+                    return solution
 
         # Return the result list containing the top k frequent numbers
-        return res
+        return solution
